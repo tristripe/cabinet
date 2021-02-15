@@ -1,3 +1,9 @@
-header
-  .container
-    span header
+header.header
+    .container.container--wide.header__wrapper
+        a(href="#").header__logo
+            img(src="./assets/img/logo.svg")
+        nav.header__menu
+            a(href="index.html").header__menu-link.header__menu-link--active Товары
+            a(href="order.html").header__menu-link Заказы
+            a(href="order-item.html").header__menu-link Аналитика
+            a(href="options.html").header__menu-link Настройки

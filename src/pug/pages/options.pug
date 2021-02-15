@@ -1,0 +1,47 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+    - var pageClass = 'index-page';
+
+block content
+    section.section-main
+        .container
+            .block.block__title.block__order-status
+                h1.title.title__order Настройки
+            .block.block__wrapper.block__options
+                section.section-half
+                    h2.title.title__options.title--subtitle Коэффициенты
+                    .options
+                        .options__row
+                            span.options__description Коэффициент промо:
+                            label.options__label
+                                input(type="text" placeholder="Не указан").options__input
+                        .options__row
+                            span.options__description Коэффициент специальной цены:
+                            label.options__label
+                                input(type="text" placeholder="Не указан").options__input
+                        .options__row
+                            span.options__description Коэффициент промокодов:
+                            label.options__label
+                                input(type="text" placeholder="Не указан").options__input
+                        .options__row
+                            span.options__description Коэффициент оборачиваемости:
+                            label.options__label
+                                input(type="text" placeholder="Не указан").options__input
+                section.section-half
+                    h2.title.title__options.title--subtitle Настройки заказа
+                    .options.options--big
+                        .options__row
+                            .options__text
+                                p Автоматическое размещение заказа:
+                                p.options__text--small Возможность автоматического размещения (вне зависимости от суммы заказа)
+                            button(type="button").switch.switch__options
+                        .options__row
+                            span.options__description Пороговая сумма заказа без подтверждения:
+                            label
+                                input(type="text" placeholder="150 000").options__input
+            .block.block__button-wrapper
+                button(type="button").btn.btn__cancel Отменить изменения
+                button(type="button").btn.btn--black Сохранить изменения

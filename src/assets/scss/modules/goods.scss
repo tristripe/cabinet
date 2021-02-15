@@ -1,0 +1,120 @@
+.goods {
+  position: relative;
+
+  &--scroll {
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -16px;
+      left: 0;
+      height: 16px;
+      width: 100%;
+      background-color: $default-white;
+      border-radius: 0 0 12px 12px;
+    }
+  }
+}
+
+.goods__table {
+  padding-right: 16px;
+}
+
+.goods__wrapper {
+  max-width: 1140px;
+  background-color: $default-white;
+  border-radius: 12px;
+  padding: 10px 16px 32px 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.goods__table-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-width: 1140px;
+  background-color: $default-white;
+  border-radius: 12px;
+  padding: 10px 16px 32px 16px;
+  position: relative;
+  z-index: 1;
+
+  &::-webkit-scrollbar-track
+  {
+    border-radius: 10px;
+    background-color: $bg-gray;
+    width: 1160px;
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+
+  &::-webkit-scrollbar
+  {
+    height: 8px;
+    background-color: white;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    background-color: $neutral-gray;
+  }
+}
+
+.goods__interface {
+  margin-bottom: 10px;
+}
+
+.goods__checked {
+  font-size: 11.5px;
+  line-height: 16px;
+  color: $default-black;
+  padding-left: 32px;
+  margin-left: 31px;
+  position: relative;
+  margin-right: 22px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: $default-black;
+    color: $default-white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.goods__checkbox {
+  margin: 0 auto;
+}
+
+.goods__new-mark {
+  background-color: $default-yellow;
+
+  .table__checkbox-cell {
+    position: relative;
+
+    &:before {
+      content: 'NEW';
+      font-size: 8px;
+      line-height: 8px;
+      letter-spacing: 0.2px;
+      color: $default-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 27px;
+      height: 10px;
+      background-color: $default-red;
+      top: 16px;
+    }
+  }
+}

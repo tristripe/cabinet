@@ -1,0 +1,126 @@
+
+.table {
+  border-spacing: 0;
+  width: 100%;
+
+  &--order-list {
+    background-color: $default-white;
+  }
+
+  .table__checkbox-cell {
+    min-width: 42px;
+    max-width: 42px;
+    padding-left: 15px;
+  }
+
+  .table__naming-cell {
+    min-width: 254px;
+    width: 254px;
+  }
+
+  .table__cabinet-cell {
+    min-width: 136px;
+    max-width: 136px;
+  }
+
+  .table__order-cell {
+    width: 202px;
+  }
+
+  .table__date-cell {
+    width: 182px;
+  }
+
+  .table__status-cell {
+    width: 276px;
+    text-align: center;
+  }
+
+  .table__sku-cell {
+    width: 100px;
+  }
+
+  .table__order-name-cell {
+    width: 478px;
+  }
+
+  thead {
+    td {
+      font-size: 10px;
+      line-height: 16px;
+      color: $default-gray;
+      padding: 6px 11px 14px 3px;
+      white-space: nowrap;
+    }
+  }
+
+  tbody {
+    td {
+      font-size: 11.5px;
+      line-height: 16px;
+      color: $default-gray;
+      padding: 13px 11px 13px 6px;
+    }
+
+    tr:nth-child(odd) {
+      background-color: $bg-gray;
+
+      td {
+        border-color: $bg-gray;
+      }
+    }
+
+    tr.table__cell {
+      transition: $transition;
+
+      &:hover {
+        box-shadow: 0 0 0 1px $table-hover-gray;
+        cursor: pointer;
+      }
+
+      &--warning {
+        background-color: $default-yellow;
+        border: 2px solid transparent;
+        transition: $transition;
+
+        &:hover {
+          box-shadow: 0 0 0 1px $table-hover-orange;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &--order {
+    thead {
+      td {
+        padding: 6px 13px 16px 13px;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 13px 11px 12px 16px;
+      }
+    }
+  }
+
+  &--order-list {
+    thead {
+      td {
+        padding: 1px 13px 14px 13px;
+        text-transform: uppercase;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 13px 11px 12px 16px;
+      }
+    }
+  }
+}
+
+.table__order-name-cell {
+  width: 420px;
+}

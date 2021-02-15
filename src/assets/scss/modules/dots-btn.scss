@@ -1,0 +1,90 @@
+.dots-btn {
+  position: relative;
+}
+
+.dots-btn__wrapper {
+  position: absolute;
+  z-index: 1;
+  left: -200px;
+  padding: 16px;
+  background-color: $default-white;
+  box-shadow: 0 0 8px rgba(165, 180, 187, 0.25), -2px 5px 6px rgba(196, 218, 228, 0.2), -11px 9px 21px rgba(196, 218, 228, 0.18);
+  border-radius: 10.5px;
+  display: none;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.dots-btn__button {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: none;
+  position: relative;
+  color: $bg-three-dots;
+  font-size: 12px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:before, &:after {
+    content: "\2022";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: inherit;
+    color: $bg-three-dots;
+    font-size: 12px;
+  }
+
+  &:before {
+    top: 4px;
+  }
+
+  &:after {
+    top: 16px;
+  }
+
+  &:hover {
+    background-color: $neutral-gray;
+    color: $default-white;
+
+    &:before,
+    &:after {
+      color: $default-white;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 1px $focus-color;
+  }
+
+  &--active {
+    background-color: $default-white;
+    color: $bg-three-dots;
+    box-shadow: 0 0 8px rgba(165, 180, 187, 0.25), -2px 5px 6px rgba(196, 218, 228, 0.2), -11px 9px 21px rgba(196, 218, 228, 0.18);
+  }
+}
+
+.dots-btn__option {
+  background-color: transparent;
+  border: none;
+  color: $default-gray;
+  font-size: 11.5px;
+  line-height: 16px;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    color: $default-black;
+  }
+
+  &:focus {
+    outline: none;
+    color: $default-black;
+  }
+}

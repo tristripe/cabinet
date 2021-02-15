@@ -1,0 +1,59 @@
+.title {
+  font-size: 25px;
+  line-height: 32.5px;
+  color: $default-black;
+  font-weight: 400;
+
+  &--subtitle {
+    font-size: 20px;
+    line-height: 20px;
+    color: $default-gray;
+    letter-spacing: 0.15px;
+  }
+}
+
+.title__subtitle {
+  margin-bottom: 18px;
+}
+
+.title__main {
+  margin-bottom: 26px;
+}
+
+.title__order {
+  margin-right: 24px;
+}
+
+.title__options {
+  margin-bottom: 16px;
+}
+
+.title__status {
+  margin: 0;
+  padding-left: 32px;
+  position: relative;
+  font-size: 13px;
+  font-weight: 700;
+  color: $default-gray;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 24px;
+    width: 24px;
+    left: 0;
+    top: 0;
+    background-image: url("/assets/img/clock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
+
+.title__payment {
+  margin-left: auto;
+}
+
+.title__order-list {
+  margin-bottom: 24px;
+}

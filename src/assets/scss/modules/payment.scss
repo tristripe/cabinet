@@ -1,0 +1,20 @@
+.payment {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 12px 32px 12px 64px;
+  position: relative;
+  color: $default-black;
+  border: 1px solid $default-black;
+  border-radius: 22px;
+  background-color: transparent;
+  background-image: url("/assets/img/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 33.6px center;
+  transition: $transition;
+
+  &:hover {
+    background-color: $default-white;
+  }
+}

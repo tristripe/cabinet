@@ -23,11 +23,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: $mainFont;
 	font-size: $mainFontSize;
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $main-bg;
+  font-family: 'Tondo Corp', Verdana, sans-serif;
 }
 
 *, *:before, *:after { box-sizing: border-box; }
@@ -44,16 +45,6 @@ ul, li {
 
 section, .section {
   position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
 }
 
 .wrapper {
@@ -75,6 +66,11 @@ section, .section {
   position: relative;
   margin: 0 auto;
   max-width: $desktopWidth;
+
+  &--wide {
+    max-width: $desktopWideWidth;
+  }
+
   @media screen and (max-width: $smDesktopWidth) {
     max-width: tableWidth;
   }
@@ -86,5 +82,41 @@ section, .section {
   }
 }
 
+.section-main {
+  margin: 40px 0;
+}
+
+.section-half {
+  &:first-of-type {
+    width: 512px;
+    margin-right: 16px;
+  }
+
+  &:last-of-type {
+    width: 612px;
+    margin-right: 0;
+  }
+}
+
 // Modules
 // @import "modules/my-module.scss";
+
+@import "modules/header";
+@import "modules/goods";
+@import "modules/block";
+@import "modules/btn";
+@import "modules/title";
+@import "modules/input";
+@import "modules/dropdown";
+@import "modules/table";
+@import "modules/arrow-btn";
+@import "modules/dots-btn";
+@import "modules/checkbox";
+@import "modules/switch";
+@import "modules/upload";
+@import "modules/pagination";
+@import "modules/payment";
+@import "modules/order-info";
+@import "modules/order-list";
+@import "modules/quantity";
+@import "modules/options";

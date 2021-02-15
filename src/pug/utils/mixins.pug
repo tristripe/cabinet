@@ -1,4 +1,73 @@
-mixin item(title, descr)
-  .item
-    h2.item-title= title
-    p.item-descr= descr
+mixin input(type, placeholder, classes, value)
+    label
+        input(type= type, placeholder= placeholder, class= classes, value= value).input
+
+mixin order-td(orderNumber, orderCell, summCell, statusCell, classes)
+    tr.table__cell(class = classes)
+        td.table__order-cell= orderNumber
+        td.table__date-cell= orderCell
+        td.table__summ-cell= summCell
+        td.table__status-cell= statusCell
+
+mixin order-item-td(sku, naming, price, value, summ, classes)
+    tr(class = classes)
+        td.table__sku-cell= sku
+        td.table__order-name-cell= naming
+        td.table__order-price-cell= price
+        td.table__order-quantity-cell
+            .quantity
+                button(type="button").quantity__minus -
+                label
+                    input(type="text" value= value).quantity__input
+                button(type="button").quantity__plus +
+        td.table__order-summ-cell= summ
+        td.table__order-delete-cell
+            button(type="button").btn-delete Удалить
+
+mixin main-td(newOzon, checkbox, id, idozon, naming, cabinet, checkflag, cat1, cat2)
+    tr(class = newOzon)
+        td.table__checkbox-cell
+            button(type="button" class= checkbox).checkbox &#10003;
+        td= id
+        td= idozon
+        td.table__naming-cell= naming
+        td.table__cabinet-cell= cabinet
+        td
+            button(type="button" class= checkflag).switch.goods__switch
+        td= cat1
+        td= cat2
+        td
+            +input('text', '0.4', 'input--params', '0.4')
+        td
+            +input('text', '0.15', 'input--params', '0.15')
+        td
+            +input('text', '0.15', 'input--params', '0.15')
+        td
+            +input('text', '0.15', 'input--params', '0.15')
+        td.table__dots-cell.dots-btn
+            button(type='button').dots-btn__button.dots-btn__button--active.goods__context &#8226;
+            .dots-btn__wrapper
+                ul.dots-btn__list
+                    li
+                        button(type="button").dots-btn__option.dots-btn__option--new Перенести в новинки
+                    li
+                        button(type="button").dots-btn__option.dots-btn__option--actual Перенести в действующую матрицу
+                    li
+                        button(type="button").dots-btn__option.dots-btn__option--archive Перенести в архив
+                    li
+                        button(type="button").dots-btn__option.dots-btn__option--delete Удалить
+
+mixin dropdown(name)
+    .dropdown__item
+        button(type="button").dropdown__button= name
+        button(type="button").dropdown__close &#215;
+        .dropdown__wrapper
+            ul.dropdown__list
+                li
+                    a.dropdown__link Option 1
+                li
+                    a.dropdown__link Option 2
+                li
+                    a.dropdown__link Option 3
+                li
+                    a.dropdown__link Option 4

@@ -1,1 +1,42 @@
 // header style
+
+.header {
+  background-color: $default-white;
+  height: 64px;
+}
+
+.header__wrapper {
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+}
+
+.header__logo {
+  height: 100%;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__menu-link {
+  font-size: 14px;
+  line-height: 14px;
+  color: $default-black;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  padding: 25px 17px;
+  border-bottom: 2px solid transparent;
+
+  &--active {
+    border-bottom: 2px solid $default-black;
+  }
+}

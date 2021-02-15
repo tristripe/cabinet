@@ -1,0 +1,23 @@
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid $default-transparentgray;
+  border-radius: 4px;
+  background-color: transparent;
+  color: $default-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $transition;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 1px $focus-color;
+  }
+
+  &--on {
+    background-color: $default-black;
+    cursor: pointer;
+  }
+}

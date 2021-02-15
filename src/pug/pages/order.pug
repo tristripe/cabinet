@@ -1,0 +1,56 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+    - var pageClass = 'index-page';
+
+block content
+    section.section-main
+        .container
+            .block.block__title-order
+                h1.title.title__order Заказы
+            .block.goods
+                .goods__wrapper
+                    table.table.table--order
+                        thead
+                            tr
+                                td
+                                    button(type="button").arrow-btn № заказа
+                                td
+                                    button(type="button").arrow-btn.arrow-btn--up Дата формирования
+                                td
+                                    button(type="button").arrow-btn.arrow-btn--down Сумма
+                                td.table__status-cell
+                                    button(type="button").arrow-btn Статус
+                        tbody
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден')
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден')
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден', 'table__cell--warning')
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден')
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден')
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден')
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден')
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден')
+                            +order-td('146561', '05.01.2021', '1 250 999 ₽', 'Подтвержден')
+            .block.pagination
+                .pagination__wrapper
+                    .pagination__options
+                        button(type="button").pagination__button 10
+                        button(type="button").pagination__button.pagination__button--active 25
+                        button(type="button").pagination__button 50
+
+                    .pagination__list-wrapper
+                        ul.pagination__list
+                            li
+                                a.pagination__button 1
+                            li
+                                a.pagination__button 2
+                            li
+                                a.pagination__button 3
+                            li ...
+                            li
+                                a.pagination__button 14
+                            li
+                                a.pagination__button 15
+

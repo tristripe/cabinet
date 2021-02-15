@@ -1,0 +1,27 @@
+.order-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $default-white;
+  height: 60px;
+  padding: 0 16px;
+  border-radius: 12px;
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    color: $default-gray;
+    margin-right: 190px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    span {
+      font-weight: 400;
+      margin-left: 35px;
+    }
+  }
+}

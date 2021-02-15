@@ -1,0 +1,80 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+    - var pageClass = 'index-page';
+
+block content
+    section.section-main
+        .container
+            .block.block__title
+                h1.title.title__main Товары
+                .upload
+                    button(type="button").btn.btn__upload.btn--upload Загрузить файл
+                    button(type="button").btn.btn--download Скачать файл
+            .block.block__content
+                .block__wrapper
+                    button(type="button").btn.btn__main-filter.btn--black Новинки
+                    button(type="button").btn.btn__main-filter Действующая матрица
+                    button(type="button").btn.btn__main-filter Архив
+            .block.block__search
+                h2.title.title__subtitle.title--subtitle Поиск
+                .block__wrapper
+                    +input('text', 'Название', 'input--search input__search')
+                    button(type="button").btn.btn__search.btn--black Искать
+            .block.block__filter.dropdown
+                h2.title.title__subtitle.title--subtitle Фильтр
+                .block__wrapper.dropdown__wrapper
+                    +input('text', 'Id товара', 'input--filter input--id')
+                    +input('text', 'Id товара ozon', 'input--filter input--ozon')
+                    +input('text', 'Название товара', 'input--filter input--large')
+                    +dropdown('Тип кабинета')
+                    +dropdown('Категория EDIS')
+                    +dropdown('Категория товара')
+                    +dropdown('Товарная категория')
+                    +dropdown('Коэфф. промо')
+                    +dropdown('Коэфф. спец.цены')
+                    +dropdown('Коэфф. промокодов')
+                    +dropdown('Коэфф. оборачиваемости')
+            .block.goods.goods--scroll
+                .goods__interface.block__wrapper
+                    button(type="button").goods__checked Выбрано 2 товара
+                    button(type="button").btn-delete Удалить
+                .goods__table-wrapper
+                    table.table.goods__table
+                        thead
+                            tr
+                                td.table__checkbox-cell
+                                td
+                                    button(type="button").arrow-btn Id товара
+                                td
+                                    button(type="button").arrow-btn.arrow-btn--up Id товара ozon
+                                td
+                                    button(type="button").arrow-btn.arrow-btn--down Название товара
+                                td.table__cabinet-cell
+                                    button(type="button").arrow-btn Тип кабинета
+                                td
+                                    button(type="button").arrow-btn Категория Edis
+                                td
+                                    button(type="button").arrow-btn Категория товара
+                                td
+                                    button(type="button").arrow-btn Товарная категория
+                                td
+                                    button(type="button").arrow-btn Коэфф промо
+                                td
+                                    button(type="button").arrow-btn Коэфф спец.цены
+                                td
+                                    button(type="button").arrow-btn Коэфф промокодов
+                                td(colspan="2")
+                                    button(type="button").arrow-btn Коэфф оборачиваемости
+                        tbody
+                            +main-td('', 'goods__checkbox checkbox--on', '157776995', '157776995', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', 'Мелкогабаритный', '', 'A', 'Смесители')
+                            +main-td('goods__new-mark', 'goods__checkbox', '157776995', '157776995', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', 'Мелкогабаритный', '', 'A', 'Смесители')
+                            +main-td('', 'goods__checkbox checkbox--on', '157776995', '157776995', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', 'Мелкогабаритный', '', 'A', 'Смесители')
+                            +main-td('', 'goods__checkbox', '157776995', '157776995', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', 'Мелкогабаритный', '', 'A', 'Смесители')
+                            +main-td('', 'goods__checkbox', '157776995', '157776995', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', 'Мелкогабаритный', '', 'A', 'Смесители')
+
+
+block script
+    script(type='text/javascript')

@@ -1,0 +1,43 @@
+.switch {
+  width: 32px;
+  height: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: $neutral-gray;
+  position: relative;
+  transition: $transition;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: $default-white;
+    border: 1px solid $dark-gray;
+    height: 100%;
+    width: 16px;
+    border-radius: 50%;
+    transition: $transition;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $focus-color;
+  }
+
+  &--active {
+    background-color: $default-black;
+
+    &:before {
+      border: 1px solid $default-black;
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.switch__options {
+  align-self: flex-start;
+  margin-left: 20px;
+}

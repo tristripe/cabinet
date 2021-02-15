@@ -1,0 +1,37 @@
+.arrow-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0.2px;
+  color: $default-gray;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-image: url("/assets/img/arrow-btn.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--up,
+  &--down {
+    &:before {
+      background-image: url("/assets/img/arrow-btn--up.svg");
+    }
+  }
+
+  &--down {
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+}

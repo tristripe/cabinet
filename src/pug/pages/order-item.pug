@@ -1,0 +1,43 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+    - var pageClass = 'index-page';
+
+block content
+    section.section-main
+        .container
+            .block.block__title.block__order-status
+                h1.title.title__order Заказ № 146560
+                p.title__status Требует подтверждения
+                a(href="#").payment.title__payment Посмотреть расчет заказа
+            .block.block__order-info.order-info
+                p.order-info__city Город:
+                    span  Санкт-Петербург
+                p.order-info__position Количество позиций:
+                    span  4
+                p.order-info__summ Сумма заказа:
+                    span  1 862 990 ₽
+
+            .block.block__order-list.order-list
+                h2.title.title__order-list.title--subtitle Информация о заказе
+                .order-list__table-wrapper
+                    table.table.table--order-list.order-list__table
+                        thead
+                            tr
+                                td SKU
+                                td Наименование товара
+                                td Цена за единицу
+                                td Количество
+                                td Общая сумма
+                                td
+                        tbody
+                             +order-item-td('17866', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', '68 360 ₽', '123', '683 600 ₽', '')
+                             +order-item-td('17866', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', '68 360 ₽', '123', '683 600 ₽', '')
+                             +order-item-td('17866', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', '68 360 ₽', '123', '683 600 ₽', '')
+                             +order-item-td('17866', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', '68 360 ₽', '123', '683 600 ₽', '')
+                             +order-item-td('17866', 'Смеситель AM.PM Like F0202600 монтируемый в стену с гигиеническим душем и полкой', '68 360 ₽', '123', '683 600 ₽', '')
+            .block.block__button-wrapper
+                button(type="button").btn.btn__cancel Отменить заказ
+                button(type="button").btn.btn--black Подтвердить заказ
